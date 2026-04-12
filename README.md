@@ -3,7 +3,7 @@
 ## Author
 - **Name:** Connie
 - **GitHub:** [@Connie-cloud-svg](https://github.com/Connie-cloud-svg)
-- **Date:** April 12, 2026
+- **Date:** April 01, 2026
 
 ## Project Description
 This week I built a **Weather Dashboard** — a fully functional web app that fetches real-time weather data from the OpenWeatherMap API. The project brought together everything covered in Week 6: Promises, async/await, the Fetch API, error handling, and localStorage. Beyond the mini-project, I worked through lessons on callbacks, Promise chaining, POST requests, and live search/filter on API data.
@@ -69,8 +69,8 @@ This week I built a **Weather Dashboard** — a fully functional web app that fe
 - **API key security** — understanding that API keys shouldn't be exposed in public repos
 
 ## Screenshots 
-![Weather Dashboard](projects/weather.jpeg)
-![User Directory](projects/userdirectory.jpg)
+![Weather Dashboard](projects/weather.JPG)
+![User Directory](projects/userdirectory.JPG)
 
 ## Live Demo
 [View Live Demo](https://connie-cloud-svg.github.io/iyf-s10-week-06-Connie-cloud-svg)
