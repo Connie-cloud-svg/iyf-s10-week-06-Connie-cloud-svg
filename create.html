@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory & Post Creator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .hidden { display: none; }
+        #error { color: red; margin: 10px 0; }
+        .user-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+        }
+        #controls {
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        label { font-weight: bold; }
+        input, select, button {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+        #post-result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            background: #e7f3ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>User Directory</h1>
+
+        <!-- Search, Sort, Filter -->
+        <div id="controls">
+            <div>
+                <label for="search">Search:</label>
+                <input type="text" id="search" placeholder="Name or email...">
+            </div>
+            <div>
+                <label for="sort">Sort by Name:</label>
+                <select id="sort">
+                    <option value="asc">A → Z</option>
+                    <option value="desc">Z → A</option>
+                </select>
+            </div>
+            <div>
+                <label for="city-filter">Filter by City:</label>
+                <select id="city-filter">
+                    <option value="">All Cities</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading">Loading...</div>
+        <div id="error" class="hidden"></div>
+        <div id="users-container"></div>
+
+        <hr>
+
+        <!-- Create Post Form -->
+        <h2>Create New Post</h2>
+        <form id="post-form">
+            <div>
+                <label>Title:</label>
+                <input type="text" id="post-title" required placeholder="Enter title">
+            </div>
+            <div>
+                <label>Body:</label>
+                <textarea id="post-body" required placeholder="Enter content"></textarea>
+            </div>
+            <div>
+                <label>User ID:</label>
+                <input type="number" id="post-userId" required min="1" value="1">
+            </div>
+            <button type="submit">Create Post</button>
+        </form>
+        <div id="post-result"></div>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>
